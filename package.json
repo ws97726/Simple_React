@@ -12,6 +12,7 @@
     "@babel/preset-env": "^7.18.9",
     "@umijs/fabric": "^3.0.0",
     "babel-loader": "^8.2.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "friendly-errors-webpack-plugin": "^1.7.0",
@@ -31,6 +32,7 @@
   "dependencies": {
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "babel-runtime": "^6.26.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   }

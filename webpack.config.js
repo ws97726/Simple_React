@@ -19,7 +19,7 @@ module.exports = {
     //出口文件
     publicPath: "/",
     path: path.resolve(__dirname, "./dist"),
-    filename: "[name].bundle.js",
+    filename: "bundle.[hash].js",
   },
   devServer: {
     // historyApiFallback: true,
@@ -27,7 +27,7 @@ module.exports = {
     // quiet: true,
     open: true, //项目启动直接打开
     hot: true, //开启热更新
-    port: 8082, //端口号
+    port: 8888, //端口号
     static: "./public", //指向静态文件
   },
   module: {
@@ -85,6 +85,15 @@ module.exports = {
     new CleanWebpackPlugin(),
     //命令行友好提示
     new friendlyErrorsWebpackPlugin(),
+    // [
+    //   "transform-runtime",
+    //   {
+    //     helpers: false, //表示是否开启内联的babel helpers
+    //     polyfill: false, //表示是否把内置的东西(Promise, Set, Map)等转换成非全局污染的
+    //     regenerator: true, //是否开启generator函数转换成使用regenerator runtime来避免污染全局域
+    //     moduleName: "babel-runtime", //调用辅助 设置模块（module）名字/路径
+    //   },
+    // ],
   ],
   resolve: {
     extensions: ["", ".ts", ".tsx", ".js", ".jsx"],
