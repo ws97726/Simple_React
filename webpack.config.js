@@ -83,7 +83,7 @@ module.exports = {
     }),
     //打包前清除上次打包
     new CleanWebpackPlugin(),
-    //命令行友好提示
+    //命令行友好提示-
     new friendlyErrorsWebpackPlugin(),
     // [
     //   "transform-runtime",
